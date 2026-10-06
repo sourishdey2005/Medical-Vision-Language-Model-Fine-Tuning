@@ -1,4 +1,4 @@
-```markdown
+
 # DAKF: Domain-Adaptive Knowledge Fusion for Medical Image Captioning
 
 A parameter-efficient fine-tuning pipeline for medical vision-language models, evaluated on the Radiology_mini benchmark. This repository contains the full training, evaluation, and ablation code for four PEFT strategies — LoRA, AdaLoRA, KPL-METER, and DAKF — with reproducible results, confidence intervals, and significance testing.
