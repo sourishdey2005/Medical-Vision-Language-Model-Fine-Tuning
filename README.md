@@ -1,3 +1,4 @@
+```markdown
 # DAKF: Domain-Adaptive Knowledge Fusion for Medical Image Captioning
 
 A parameter-efficient fine-tuning pipeline for medical vision-language models, evaluated on the Radiology_mini benchmark. This repository contains the full training, evaluation, and ablation code for four PEFT strategies — LoRA, AdaLoRA, KPL-METER, and DAKF — with reproducible results, confidence intervals, and significance testing.
@@ -63,7 +64,7 @@ Evaluation on 100 held-out samples from Radiology_mini:
 
 ### DAKF Pipeline
 
-
+```text
 ┌─────────────────────────────┐
 │ Input Medical Image         │
 └──────────────┬──────────────┘
@@ -91,7 +92,7 @@ Evaluation on 100 held-out samples from Radiology_mini:
 ┌──────────────▼──────────────┐
 │ Final Radiology Report      │
 └─────────────────────────────┘
-
+```
 
 ### Training Pipeline
 
@@ -105,10 +106,11 @@ Evaluation on 100 held-out samples from Radiology_mini:
 - **Base model:** `unsloth/Qwen2-VL-2B-Instruct-bnb-4bit`
 - **LoRA configuration:** rank 32, alpha 32, RSLoRA enabled, dropout 0.05, targeting `q_proj`, `k_proj`, `v_proj`, `o_proj`.
 
-
+---
 
 ## Repository Structure
 
+```text
 .
 ├── README.md
 ├── requirements.txt
@@ -144,9 +146,9 @@ Evaluation on 100 held-out samples from Radiology_mini:
     ├── kpl_only/
     ├── final_ours/
     └── final_dakf/
+```
 
-
-
+---
 
 ## Requirements
 
@@ -156,7 +158,7 @@ Evaluation on 100 held-out samples from Radiology_mini:
 - **GPU VRAM:** 16 GB minimum (tested on NVIDIA T4)
 
 ### Python Packages (`requirements.txt`)
-
+```text
 unsloth
 bitsandbytes
 accelerate
@@ -173,7 +175,9 @@ rouge-score
 nltk
 scipy
 matplotlib
+```
 
+---
 
 ## Installation
 
@@ -186,7 +190,7 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-
+---
 
 ## Dataset
 
